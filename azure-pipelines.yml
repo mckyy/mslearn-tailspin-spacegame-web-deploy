@@ -80,7 +80,7 @@ stages:
     pool:
       vmImage: 'ubuntu-20.04'
     environment: dev
-    svariables:
+    variables:
     - group: Release
     strategy:
       runOnce:
