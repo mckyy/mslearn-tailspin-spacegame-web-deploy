@@ -75,11 +75,12 @@ stages:
       succeeded(),
       eq(variables['Build.SourceBranchName'], variables['releaseBranchName'])
     )
+  jobs:
   - deployment: Deploy
     pool:
       vmImage: 'ubuntu-20.04'
     environment: dev
-    variables:
+    svariables:
     - group: Release
     strategy:
       runOnce:
